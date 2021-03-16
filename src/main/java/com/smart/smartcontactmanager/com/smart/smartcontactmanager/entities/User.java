@@ -5,23 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
 
-    @Column()
+    @Column(name = "first_name")
     private String name;
 
-    @Column(unique = true)
+    @Column(name = "email")
     private String email;
     private String password;
     private String role;
     private boolean enabled;
 
-    @Column(length = 500)
     private String about;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)

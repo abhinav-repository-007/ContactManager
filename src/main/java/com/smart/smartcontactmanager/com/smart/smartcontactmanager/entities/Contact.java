@@ -3,7 +3,7 @@ package com.smart.smartcontactmanager.com.smart.smartcontactmanager.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CONTACT")
+@Table(name = "contact")
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,7 +15,7 @@ public class Contact {
     private String phone;
     private String image;
 
-    @Column(length = 2000)
+    @Column(length = 500)
     private String decription;
 
     @ManyToOne
