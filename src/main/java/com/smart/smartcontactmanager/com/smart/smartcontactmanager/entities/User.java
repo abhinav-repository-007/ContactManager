@@ -20,6 +20,7 @@ public class User {
     private String email;
     private String password;
     private String role;
+    private String image;
     private boolean enabled;
 
     private String about;
@@ -48,6 +49,14 @@ public class User {
         this.role = role;
         this.enabled = enabled;
         this.about = about;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getId() {
