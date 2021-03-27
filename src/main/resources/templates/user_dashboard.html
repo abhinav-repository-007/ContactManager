@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user_base.html::Layout(~{::section})">
 <head>
     <meta charset="UTF-8">
     <title>User dashbard</title>
 </head>
 <body>
 <section>
-    <h1>this is UserDashboard</h1>
+    <h1>This is private user dashboard!!</h1>
+    <h1>User Name: <span th:text="${user.name}"></span></h1>
+    <h1>email : <span th:text="${user.email}"></span></h1>
+    <h1><a href="" th:href="@{/logout}">Logout</a></h1>
 </section>
 </body>
 </html>

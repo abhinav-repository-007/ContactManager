@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user_base::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>This is a home page</title>
+</head>
+<body>
+<section>
+   <div class="card mr-9">
+       <div class="card-body mr -9">
+           <h1 class="text-center">Add Contact</h1>
+           <div class="container-fluid mt-1">
+               <div class="row">
+                   <div class="col-md-10 offset-md-1">
+
+                       <form action="#"
+                       th:object="${contact}"
+                             enctype="multipart/form-data"
+                             method="post"
+                             th:action="@{/user/process-contact}"
+                             class="mt-2">
+                        <!--first name-->
+                         <div class="input-group">
+                             <div class="input-group-prepend">
+                                 <div class="input-group-text">
+                                     <i class="fa fa-plus"></i>
+                                 </div>
+
+                             </div>
+                             <input type="text" id="firstName" name="name" placeholder="Enter name here" class="form-control">
+                         </div>
+                           <!--second name-->
+                           <div class="input-group mt-3">
+                               <div class="input-group-prepend">
+                                   <div class="input-group-text">
+                                       <i class="fas fa-user-alt"></i>
+                                   </div>
+
+                               </div>
+                               <input type="text" id="secondName" name="secondName" placeholder="Enter Nick name here" class="form-control">
+                           </div>
+                           <!--Phone Field-->
+                           <div class="input-group mt-3">
+                               <div class="input-group-prepend">
+                                   <div class="input-group-text">
+                                       <i class="fa fa-phone"></i>
+                                   </div>
+
+                               </div>
+                               <input type="number" id="phone" name="phone" placeholder="Enter Phone number here" class="form-control">
+                           </div>
+
+                           <!--Email Field-->
+                           <div class="input-group mt-3">
+                               <div class="input-group-prepend">
+                                   <div class="input-group-text">
+                                       @
+                                   </div>
+
+                               </div>
+                               <input type="email" id="email_id" name="email" placeholder="Enter Email here" class="form-control">
+                           </div>
+
+                           <!--Work Field-->
+                           <div class="input-group mt-3">
+                               <div class="input-group-prepend">
+                                   <div class="input-group-text">
+                                       <i class="fa fa-briefcase"></i>
+                                   </div>
+
+                               </div>
+                               <input type="text" id="work" name="work" placeholder="Enter work here" class="form-control">
+                           </div>
+
+                           <!--Description Field-->
+                           <div class="form-group mt-3">
+                               <textarea  placeholder="Enter your contact description" name="decription" id="decription" rows="2" class="form-control"></textarea>
+
+                           </div>
+
+                           <!--Image  Field-->
+                           <div class="cutom-file mt-3">
+                               <input type="file" name="profileImage"></input>
+
+                           </div>
+                           <div class="container text-center mt-2">
+
+
+                                       <button class="btn btn-primary btn-lg" type="submit">Save</button>
+
+                           </div>
+
+                       </form>
+                   </div>
+
+               </div>
+
+
+
+           </div>
+
+       </div>
+
+   </div>
+
+</section>
+</body>
+</html>

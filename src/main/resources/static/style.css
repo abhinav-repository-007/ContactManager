@@ -21,16 +21,144 @@ body {
 
 
 #login .container #login-row #login-column #login-box {
-    margin-top: 120px;
+    margin-top: 30px;
     max-width: 600px;
-    height: 320px;
+    height: 340px;
     border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
+    background-color:  #FFFFFF;
 }
 #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
+    padding: 30px;
 }
 #login .container #login-row #login-column #login-box #login-form #register-link {
     margin-top: -85px;
 }
+
+.sidebar{
+    width: 18%;
+    background: white;
+    height: 100%;
+    position: fixed;
+    padding-top: 45px;
+}
+
+.sidebar a{
+    display: block;
+    width: 100%;
+    margin: 21px;
+    margin-left: 5px;
+    padding-left: 17px 35px;
+    text-decoration: none;
+    color: gray;
+}
+
+.sidebar a:hover{
+    background: #e2e2e2;
+}
+.sidebar .crossBtn{
+    position: absolute;
+    top:0;
+    right: 35px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.content{
+    margin-left: 20%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #383838;
+    left: -300px;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-top: 70px;
+    transition: all 0.4s ease;
+}
+aside.active {
+    left: 0;
+}
+aside a {
+    display: block;
+    padding: 1.2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    border-bottom: 1px solid #414141;
+}
+.toggle-wrap {
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+
+    /*disable selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after,
+.toggle-wrap.active .toggle-bar,
+.toggle-wrap.active .toggle-bar::before,
+.toggle-wrap.active .toggle-bar::after {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.toggle-bar {
+    width: 38px;
+    margin: 10px 0;
+    position: relative;
+    border-top: 6px solid #303030;
+    display: block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+    content: "";
+    display: block;
+    background: #303030;
+    height: 6px;
+    width: 38px;
+    position: absolute;
+    top: -16px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -ms-transform-origin: 13%;
+    -webkit-transform-origin: 13%;
+    transform-origin: 13%;
+}
+.toggle-bar::after {
+    top: 4px;
+}
+.toggle-wrap.active .toggle-bar {
+    border-top: 6px solid transparent;
+}
+.toggle-wrap.active .toggle-bar::before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.toggle-wrap.active .toggle-bar::after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
 

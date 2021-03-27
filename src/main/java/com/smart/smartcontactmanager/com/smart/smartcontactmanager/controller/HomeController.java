@@ -48,6 +48,7 @@ public class HomeController {
         model.addAttribute("user",new User());
         return "signup";
     }
+
     //this handeler for registering user
     @PostMapping("/do_register")
     public String registerUser(@ModelAttribute("user") User user,
